@@ -3,14 +3,10 @@
 * {
     margin: 0;
     padding: 0;
-    /* outline: red solid .5px; */
 }
 
 body {
     background: #D5E1EF;
-}
-
-.container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,12 +28,12 @@ main {
 main img {
     height: 288px;
     width: 288px;
-    margin: 16px;
+    padding: 16px;
     border-radius: 10px;
 }
 
 main div {
-    margin: 8px 0 40px 0;
+    padding: 8px 0 40px 0;
     width: 288px;
     height: 100%;
 }
@@ -45,9 +41,7 @@ main div {
 main h1 {
     font-family: 'Outfit';
     font-style: normal;
-    font-weight: 700;
     font-size: 22px;
-    line-height: 28px;
     color: #1F314F;
     text-align: center;
 }
@@ -55,10 +49,7 @@ main h1 {
 main p {
     font-family: 'Outfit';
     font-style: normal;
-    font-weight: 400;
     font-size: 15px;
-    line-height: 19px;
-    letter-spacing: 0.1875px;
     color: #7D889E; 
     padding: 16px;
     text-align: center;
@@ -66,12 +57,9 @@ main p {
 
 footer { 
     font-size: 11px; 
-    position: absolute;
-    margin-top: -30px;
-    width: 100vw;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
