@@ -6,97 +6,165 @@
     /* outline: solid red 1px; */
 }
 
-/* Desktop */
-@media screen and (min-width: 1440px) {
+/* Desktop = 1440px */
+@media screen and (min-width: 720px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        min-width: 365px;
-        min-height: 475px;
-    }
-    body {
-        grid-template-columns: 400px auto 400px;
-        grid-template-rows: 160px auto 160px;
     }
     .one {
         grid-area: 1/1/span 1/span 2;
     }
 }
 
-/* Mobile */
-@media screen and (max-width: 1440px) {
+/* Mobile = 375px */
+@media screen and (max-width: 720px) {
     .container {
-        /* grid-template-columns: repeat(2, 1fr); */
-        grid-template-rows: repeat(3, 1fr);
-        min-width: 365px;
-        min-height: 475px;
-    }
-    body {
-        grid-template-columns: 32px auto 32px;
-        grid-template-rows: 10px auto 10px;
+        grid-template-rows: 267px 228px 227px;
+        grid-template-columns: minmax(311px, 1fr);
     }
 }
+
 
 body {
     display: grid;
+    place-items: center;
     min-height: 100vh;
-    background-color: hsl(204, 43%, 93%);
+    min-width: 100vw;
+    background-color: #E6EFF5;
     font-size: 16px;
-}
-
-h1 {
     font-family: 'Karla';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: -0.3px;
-    color: #2AB3B1;
-}
-
-h2 {
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: -0.225px;
-    color: #C0DF33;
+    font-style: normal; 
 }
 
 .container {
+    margin: 72px 32px 72px 32px;
     display: grid;
-    grid-area: 2/2;
     background: #FFFFFF;
     box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
+
+
 .one {
-    font-family: 'Karla';
-    font-style: normal;
+    color: #9AA7BE;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 28px 24px 32px 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: -0.175px;
+}
+
+.one h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.25px;
+    color: #2AB3B1;
+    padding-bottom: 24px;
+}
+
+.one span {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.1875px;
+    color: #C0DF33;
+    padding-bottom: 16px;
+}
+
+.two {    
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    /* justify-content: space-around; */
+    background: #2AB3B1;
+    padding-left: 24px;
+}
+
+.two h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.225px; 
+    color: #FFFFFF;
+    padding-top: 24px;
+    padding-bottom: 18px;
+}
+
+.two .price {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.two .price .large {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+}
+
+.two .price .small {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: -0.2px;
-    color: #9AA7BE;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    padding-left: 11px;
 }
 
-.two {
-    background: #2AB3B1;
+.two .sub {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    padding-bottom: 26px;
+}
+
+.two button {
+    background: #C0DF33;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
+    border-radius: 5px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    margin-right: 24px;
+    border-style: none;
 }
 
 .three {
-    background: #2AB3B1;
+    background: #4ABFBC;
 }
 
-.three div {
-    background: #FFFFFF;
+.three h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.225px;
+    color: #FFFFFF;
+}
+
+.three ul {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.175px;
+    color: #FFFFFF;
     mix-blend-mode: normal;
-    opacity: 0.15;
-    height: 100%;
+    opacity: 0.75;
 }
-
 
 
 
