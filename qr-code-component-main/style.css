@@ -18,7 +18,7 @@ body {
     align-items: center; 
 }
 
-.card {
+main {
     width: 320px;
     height: 497px;
     background: #FFFFFF;
@@ -29,20 +29,20 @@ body {
     align-items: center;
 }
 
-.card img {
+main img {
     height: 288px;
     width: 288px;
     margin: 16px;
     border-radius: 10px;
 }
 
-.card div {
+main div {
     margin: 8px 0 40px 0;
     width: 288px;
     height: 100%;
 }
 
-.card h3 {
+main h1 {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
@@ -52,7 +52,7 @@ body {
     text-align: center;
 }
 
-.card p {
+main p {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
@@ -64,7 +64,7 @@ body {
     text-align: center;
 }
 
-.footer { 
+footer { 
     font-size: 11px; 
     position: absolute;
     margin-top: -30px;
@@ -75,6 +75,6 @@ body {
     align-items: center;
 }
 
-.footer a { 
+footer a { 
     color: hsl(228, 45%, 44%); 
 }
