@@ -44,6 +44,8 @@ main h1 {
     font-size: 22px;
     color: #1F314F;
     text-align: center;
+    font-weight: 700;
+    line-height: 28px;
 }
 
 main p {
@@ -53,6 +55,9 @@ main p {
     color: #7D889E; 
     padding: 16px;
     text-align: center;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.1875px;
 }
 
 footer { 
