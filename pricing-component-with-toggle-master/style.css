@@ -8,20 +8,30 @@
 
 /* Mobile */
 @media (max-width: 1050px) { 
+    body {
+        background-image: url(./images/bg-top.svg);
+        background-position: 196px 0px;
+        background-repeat: no-repeat;
+    }
     .cards {
         margin-top: 80px;
         grid-template-rows: repeat(3, 453px);
         grid-template-columns: 327px;
         gap: 32px;
     }
-
     h1 {
         margin-top: 64px;
+        min-width: max-content;
     }
 }
 
 /* Desktop */
 @media (min-width: 1050px) { 
+    body {
+        background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+        background-position: top right, left bottom;
+        background-repeat: no-repeat, no-repeat;
+    }   
     .cards {
         margin-top: 64px;
         grid-template-columns: repeat(3, 350px);
@@ -49,9 +59,6 @@ body {
     font-weight: 700;
     font-size: 15px;
     background-color: #F7F7FE;
-    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
-    background-position: 196px 0px, left bottom;
-    background-repeat: no-repeat, no-repeat;
     color: #6E728E
 }
 
@@ -88,7 +95,7 @@ h1 {
     background: #FFFFFF;
     border-radius: 50%;
     margin: 4px;
-    margin-left: 28px;
+    /* margin-left: 28px; */
     /* enable margin-left 28px to move to monthly */
 }
 
