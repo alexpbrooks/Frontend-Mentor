@@ -95,8 +95,7 @@ h1 {
     background: #FFFFFF;
     border-radius: 50%;
     margin: 4px;
-    /* margin-left: 28px; */
-    /* enable margin-left 28px to move to monthly */
+    margin-left: 28px;
 }
 
 .cards {
