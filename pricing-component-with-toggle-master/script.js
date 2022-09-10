@@ -14,7 +14,8 @@ let cardBas = cards.querySelector('#basic');
 let cardPro = cards.querySelector('#professional');
 let cardMas = cards.querySelector('#master')
 let btnBas = cardBas.querySelector('button')
-console.log(btnBas)
+let btnPro = cardBas.querySelector('button')
+let btnMas = cardMas.querySelector('button')
 
 
 function changeState(state) {
