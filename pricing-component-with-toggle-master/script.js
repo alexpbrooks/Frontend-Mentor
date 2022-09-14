@@ -14,9 +14,27 @@ let cardBas = cards.querySelector('#basic');
 let cardPro = cards.querySelector('#professional');
 let cardMas = cards.querySelector('#master')
 let btnBas = cardBas.querySelector('button')
-let btnPro = cardBas.querySelector('button')
+let btnPro = cardPro.querySelector('button')
 let btnMas = cardMas.querySelector('button')
+btnBas.addEventListener('click', () => {location.href='#basic'})
+btnPro.addEventListener('click', () => {location.href='#professional'})
+btnMas.addEventListener('click', () => {location.href='#master';})
 
+toggleDiv.addEventListener('mouseenter', () => {document.body.style.backgroundColor = '#C5C7F4'})
+toggleDiv.addEventListener('mouseleave', () => {document.body.style.backgroundColor = null})
+btnBas.addEventListener('mouseenter', () => {document.body.style.backgroundColor = '#C5C7F4'})
+btnBas.addEventListener('mouseleave', () => {document.body.style.backgroundColor = null})
+btnPro.addEventListener('mouseenter', () => {document.body.style.backgroundColor = '#C5C7F4'})
+btnPro.addEventListener('mouseleave', () => {document.body.style.backgroundColor = null})
+btnMas.addEventListener('mouseenter', () => {document.body.style.backgroundColor = '#C5C7F4'})
+btnMas.addEventListener('mouseleave', () => {document.body.style.backgroundColor = null})
+
+function changeBackground() {
+    let body = document.querySelector('body');
+    
+}
+
+// changeBackground();
 
 function changeState(state) {
     if (state == true) { toggleState = true; }

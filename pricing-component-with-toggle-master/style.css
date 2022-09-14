@@ -72,12 +72,14 @@ h1 {
     display: flex;
     align-items: center;
     gap: 24px;
+    cursor: pointer;
 }
 
 .toggle span {
     line-height: 28px;    
     mix-blend-mode: normal;
     opacity: 0.5;
+    /* background: #FFFFFF; */
 }
 
 .toggle #purple {
@@ -86,6 +88,11 @@ h1 {
     height: 32px;
     background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
     border-radius: 16px;
+}
+
+.toggle #purple:hover {
+    mix-blend-mode: normal;
+    opacity: 0.5;
 }
 
 .toggle #white {
@@ -151,6 +158,7 @@ h1 {
     border-style: none;
     margin-bottom: 31px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #basic, #master {
@@ -172,13 +180,18 @@ h1 {
     background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
 }
 
+#basic button:hover, #master button:hover {
+    color: #6D72DE; 
+    background: #FFFFFF;
+    border: 1px solid #6D72DE;
+}
+
 
 #professional {
     background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
     box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
     border-radius: 10px;
     color: #FFFFFF;
-
 }
 
 #professional hr {
@@ -188,6 +201,12 @@ h1 {
 #professional button {
     color: #6D72DE;
     background: #FFFFFF;
+}
+
+#professional button:hover {
+    background: none;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 footer {
