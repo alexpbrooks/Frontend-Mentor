@@ -198,8 +198,8 @@ body {
 footer { 
     font-size: 11px; 
     text-align: center; 
-    /* position: absolute;
-    margin-top: calc(100vh - 30px); */
+    position: absolute;
+    margin-top: calc(100vh - 30px);
 }
 
 footer a { 
