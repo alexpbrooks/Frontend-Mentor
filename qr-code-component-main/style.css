@@ -6,67 +6,56 @@
 }
 
 body {
-    background: #D5E1EF;
     min-height: 100vh;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+    background: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 main {
-    width: 320px;
-    height: 497px;
-    background: #FFFFFF;
-    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
-    border-radius: 20px;
+    background: #FFF;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.067rem;
+    width: 21.333rem;
+    height: 33.133rem;
+    border-radius: 0.667rem;
 }
 
 main img {
-    height: 288px;
-    width: 288px;
-    padding: 16px;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 0.667rem;
 }
 
-main div {
-    padding: 8px 0 40px 0;
-    width: 288px;
+section {
     height: 100%;
+    text-align: center;
+    margin: 16px;
 }
 
-main h1 {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-size: 22px;
+section h1 {
     color: #1F314F;
-    text-align: center;
     font-weight: 700;
-    line-height: 28px;
+    font-size: 1.467rem;
+    line-height: 1.867rem;
 }
 
-main p {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-size: 15px;
-    color: #7D889E; 
-    padding: 16px;
-    text-align: center;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0.1875px;
+section div {
+    color: #7D889E;
+    line-height: 1.267rem;
+    letter-spacing: 0.013rem;
+    margin: 16px;
 }
 
-footer { 
-    font-size: 11px; 
-    position: absolute;
-    margin-top: calc(100vh - 30px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+footer {
+    position: relative;
+    top: 100px;
 }
 
 footer a { 

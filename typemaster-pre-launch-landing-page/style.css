@@ -16,51 +16,17 @@
     .main .img3 {
         grid-column: 2/span 2;
     }
-    .img1 {
-        margin-top: 24px;
-        margin-bottom: 24px;
-        overflow: hidden;
 
+    .header {
+        margin: 23px 24px 64px 24px;
     }
 
-    .img1 img {
-        width: calc(372px - 24px);
-        height: 331px;
-        border-radius: 20px;
-
-    }
-
-
-    .img2 {
-        margin-left: -45px;
-
-        width: 129px;
-        height: 193px;
-
-        background-image: url("./assets/mobile/image-phone-and-keyboard.jpg");
-        background-size:contain;
-        background-position: center;
-        border-radius: 20px;
-
-        overflow: hidden;
-
-    }
-    .img3 {
-        width: 220px;
-        height: 193px;
-
-        background-image: url("./assets/mobile/image-glass-and-keyboard.jpg");
-        background-size:contain;
-        background-position: center;
-        border-radius: 20px;
-
-    }
     .header button {
         padding: 11px 14.5px 11px 13.5px
     }
 
     .cta {
-        margin-top: 64px;
+        margin: 0 24px 64px 24px;
     }
 
     .cta h1 {
@@ -78,14 +44,52 @@
         padding: 11px 14px 11px 14px;
     }
 
+    .img1 {
+        margin: 0 0 24px 24px;
+    }
+
+    .img1 img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .img2 {
+        margin-left: -45px;
+        background: #F16718;
+        width: 129px;
+        height: 193px;
+        border-radius: 20px;
+    }
+
+    .img2 img {
+        width: 100%;
+        border-radius: 20px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+    }
+
+    .img3 {
+        margin-right: 24px;
+    }
+
+    .img3 img {
+        width: 220px;
+        height: 193px;
+        border-radius: 20px;
+    }
+
     .info {
         margin-top: 75px;
+    }
+
+    .info p {
+        color: #7B8BAD;
+        margin: 24px;
     }
 
 }
 
 body {
-    margin: 23px 24px 50px 24px;
     display: grid;
     font-family: 'Barlow', sans-serif;
     font-style: normal;
@@ -95,6 +99,7 @@ body {
     grid-template-rows: repeat(4, auto);
 }
 
+
 h1 {
     font-size: 56px;
     line-height: 56px;
@@ -103,6 +108,7 @@ h1 {
 
 h2 {
     font-size: 32px;
+    font-weight: 900;
     line-height: 36px;
     text-transform: uppercase;
 }

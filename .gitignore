@@ -15,4 +15,7 @@
 .DS_Store
 .prettierignore
 
+# Added
+archive
 design
+*.zip
