@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: solid red 1px; */
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        min-width: 19.438rem;
+        min-height: 45.126rem;
+        grid-template-rows: 16.688rem 14.219rem 14.219rem;
+        border-radius: 0.031rem;
+    }
+    .card-one, .card-two, .card-thr {
+        padding: 1.5rem;
+    }
+    .card-one {
+        font-size: 0.875rem;
+        line-height: 1.625rem;
+        letter-spacing: -0.011rem;
+    }
+    .card-one h1 {
+        font-size: 1.25rem;
+        line-height: 1.438rem;
+        letter-spacing: -0.016rem;
+    }
+    .card-one span {
+        font-size: 0.938rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.012rem;
+    }
+
+
+}
+
+@media screen and (min-width: 720px) {
+    .container {
+        max-width: 39.688rem;
+        max-height: 29.688rem;
+        grid-template-columns: 19.844rem 19.844rem;
+        grid-template-rows: 13.5rem 16.188rem;
+        border-radius: 8px;
+    }
+    .card-one, .card-two, .card-thr {
+        padding: 2.5rem;
+    }
+    .card-one {
+        grid-column: 1/span 2;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        letter-spacing: -0.013rem;
+    }
+    .card-one h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.019rem;
+    }
+    .card-one span {
+        font-size: 1.125rem;
+        line-height: 1.313rem;
+        letter-spacing: 0.014rem;
+    }
+
+}
+
+body {
+    padding: 2rem;
+    min-height: 100vh;
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    background: rgb(42,179,177);
+    box-shadow: 0 0.938rem 1.875rem rgba(0, 81, 171, 0.148847);
+}
+
+.card-one {
+    background: #FFF;
+    color: #9AA7BE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-one h1 {
+    font-weight: 700;
+    color: #2AB3B1;
+}
+
+.card-one span {
+    font-weight: 700;
+    color: #C0DF33;
+}
+
+.card-two {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-two h2 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.313rem;
+    letter-spacing: -0.014rem;
+}
+
+.price .large {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.313rem;
+    letter-spacing: -0.025rem;  
+}
+
+.price .small {
+    line-height: 1.625rem;
+    letter-spacing: -0.013rem;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.card-two .sub {
+    line-height: 1.625rem;
+    letter-spacing: -0.013rem;
+}
+
+.card-two button {
+    background: #C0DF33;
+    color: #FFF;
+    box-shadow: 0 0.625rem 0.625rem rgba(0, 0, 0, 0.0973011);
+    border-radius: 0.031rem;
+    border: none;
+    padding: 0.938rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-thr {
+    background: rgba(255, 255, 255, .15);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-thr h3 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.313rem;
+    letter-spacing: -0.014rem;
+}
+
+.card-thr ul {
+    list-style: none;
+}
+
+.card-thr li {
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.170.031rem;
+}
+
+footer { 
+    font-size: 0.688rem; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
