@@ -8,40 +8,56 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<img src="./images/logo.svg" class="logo">
 <div class="container">
   <div class="input">
-
+    <div class="bill">
+      <label for="billamount">Bill</label>
+      <input type="number" name="billamount" id="billamount" min="1">
+    </div>
+    <div class="tip">
+      <label for="tipamount">Select Tip %</label>
+      <div class="buttons">
+        <button name="tipamount">5%</button>
+        <button name="tipamount">10%</button>
+        <button name="tipamount">15%</button>
+        <button name="tipamount">25%</button>
+        <button name="tipamount">50%</button>
+        <input type="number" name="tipamount" placeholder="Custom">
+      </div>
+    </div>
+    <div class="people">
+      <label for="peopleamount">Number of People</label>
+      <input type="number" name="peopleamount" id="peopleamount" min="2">
+    </div>
   </div>
-
   <div class="output">
-    
+  <div class="wrapper">
+    <div class="split">
+      <div class="left">
+        <span class="large">Tip Amount</span>
+        <span class="small">/ person</span>
+      </div>
+      <div class="right">
+        <span class="amount">$4.25</span>
+      </div>
+    </div>
+    <div class="total">
+      <div class="left">
+        <span class="large">Total</span>
+        <span class="small">/ person</span>
+      </div>
+      <div class="right">
+        <span class="amount">$402.25</span>
+      </div>
+    </div>
+    <button>Reset</button>
   </div>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+  </div>
 </div>
-
-  
-<!-- <footer>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer> -->
+<footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br /> 
+    Coded by <a href="#">Tuxxey</a>.
+  </footer>
 </body>
 </html>

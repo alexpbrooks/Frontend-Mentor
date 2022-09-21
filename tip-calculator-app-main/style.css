@@ -1,19 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 0;
+    /* outline: red solid .5px; */
+}
+
+:root {
+    font-size: 24px;
+    --a: hsl(172, 67%, 45%);
+    --b: hsl(183, 100%, 15%);
+    --c: hsl(186, 14%, 43%);
+    --d: hsl(184, 14%, 56%);
+    --e: hsl(185, 41%, 84%);
+    --f: hsl(189, 41%, 97%);
+    --g: hsl(0, 0%, 100%);
+}
+
+/* Mobile */
+@media screen and (max-width: 920px) { 
+    .container {
+        grid-template-rows: auto auto;
+        border-radius: 25px 25px 0 0;
+        min-height: 789px;
+        width: 100%;
+    }
+    .input .tip .buttons {
+        grid-template-columns: repeat(2, calc(50% - 8px));
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+    }
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 920px) { 
+    .container {
+        grid-template-columns: auto auto;
+        border-radius: 25px;
+    }
 }
 
 body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--e);
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
+
+.logo {
+    padding: 50px 0 40px 0;
+}
+
+.container {
+    display: grid;
+    background-color: var(--g);
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    padding: 32px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input .bill,
+.input .tip,
+.input .people {
+    display: flex;
+    flex-direction: column;
+    color: #5E7A7D;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.input .bill input {
+    font-family: 'Space Mono', monospace;
+    background-color: #F3F9FA;
+    font-size: 1rem;
+    line-height: 36px;
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 19px;
+    border: none;
+    text-align: right;
+    padding-right: 17.5px;
+}
+
+.input .tip {
+    display: flex;
+    flex-direction: column;
+}
+
+.input .tip .buttons {
+    display: grid;
+}
+
+.input .tip .buttons button {
+    background: #00474B;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 0 6px 0;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.input .tip .buttons input {
+    font-family: 'Space Mono', monospace;
+    text-align: right;
+    color: #547878;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 17px 6px 0;
+    font-size: 1rem;
+}
+
+
+.input .people {
+    display: flex;
+    flex-direction: column;
+}
+
+.input .people input {
+    font-family: 'Space Mono', monospace;
+    background-color: #F3F9FA;
+    font-size: 1rem;
+    line-height: 36px;
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: 19px;
+    border: none;
+    text-align: right;
+    padding-right: 17.5px;
+}
+
+.output {
+    background-color: var(--b);
+    border-radius: 15px;
+    padding: 37px 22px 32px 24px;
+}
+
+.output .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.output .wrapper .split, 
+.output .wrapper .total {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.output .wrapper .split .left, 
+.output .wrapper .total .left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'Space Mono';
+
+}
+
+.output .wrapper .left .large {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+    .output .wrapper .left .small {
+    font-size: 13px;
+    line-height: 19px;
+    color: #7F9D9F;
+}
+
+.output .wrapper .right {
+    display: flex;
+    justify-content: flex-end;
+
+    font-family: 'Space Mono';
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: -0.666667px;
+    color: #26C2AE;
+}
+
+.output .wrapper button {
+    background: #26C2AE;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    padding: 9px 0 9px 0;
+}
+
 
 footer {
     font-size: 11px; text-align: center;
 }
+
 footer a {
     color: hsl(228, 45%, 44%)
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
