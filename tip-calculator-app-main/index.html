@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Tip calculator app</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <img src="./images/logo.svg" class="logo">
@@ -13,22 +13,22 @@
   <div class="input">
     <div class="bill">
       <label for="billamount">Bill</label>
-      <input type="number" name="billamount" id="billamount" min="1">
+      <input type="number" name="billamount" id="billamount" min="1" placeholder="0">
     </div>
     <div class="tip">
       <label for="tipamount">Select Tip %</label>
       <div class="buttons">
-        <button name="tipamount">5%</button>
-        <button name="tipamount">10%</button>
-        <button name="tipamount">15%</button>
-        <button name="tipamount">25%</button>
-        <button name="tipamount">50%</button>
-        <input type="number" name="tipamount" placeholder="Custom">
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input type="number" id="tipamount" placeholder="Custom">
       </div>
     </div>
     <div class="people">
-      <label for="peopleamount">Number of People</label>
-      <input type="number" name="peopleamount" id="peopleamount" min="2">
+      <div class="peoplenumber"><label for="peopleamount">Number of People</label> <span class="errormessage">Can't be zero</span></div>
+      <input type="number" name="peopleamount" id="peopleamount" min="1" placeholder="0">
     </div>
   </div>
   <div class="output">

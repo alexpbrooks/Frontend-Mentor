@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    min-width: 0;
     /* outline: red solid .5px; */
 }
 
@@ -24,6 +23,7 @@
         grid-template-rows: auto auto;
         border-radius: 25px 25px 0 0;
         min-height: 789px;
+        min-width: 375px;
         width: 100%;
     }
     .input .tip .buttons {
@@ -31,14 +31,53 @@
         grid-template-rows: repeat(3, 1fr);
         gap: 16px;
     }
-    
+    .input {
+        justify-content: space-around;
+    }
+    .input .bill,
+    .input .tip,
+    .input .people {
+        gap: 6px;
+    }
+    .output .wrapper {
+        justify-content: space-between;
+    }
+    .output .wrapper .right {
+        font-size: 1.333rem;
+        line-height: 1.958rem;
+        letter-spacing: -0.028rem;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: 920px) { 
     .container {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
         border-radius: 25px;
+        max-width: 920px;
+        min-height: 481px;
+    }
+    .input {
+        display: flex;
+        justify-content: space-around;
+    }
+    .input .tip .buttons {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        grid-template-rows: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .output .wrapper {
+        justify-content: flex-start;
+        gap: 25px;
+    }
+    .output .wrapper button {
+        margin-top: auto;
+    }
+    .output .wrapper .right {
+        font-size: 2rem;
+        line-height: 2.958rem;
+        letter-spacing: -0.042rem;
     }
 }
 
@@ -46,7 +85,6 @@ body {
     font-family: 'Space Mono', monospace;
     background-color: var(--e);
     min-height: 100vh;
-    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,26 +104,25 @@ body {
 }
 
 .input {
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .input .bill,
 .input .tip,
 .input .people {
+    color: var(--c);
+    font-size: 0.667rem;
     display: flex;
     flex-direction: column;
-    color: #5E7A7D;
-    gap: 6px;
-    font-size: 16px;
 }
 
 .input .bill input {
     font-family: 'Space Mono', monospace;
-    background-color: #F3F9FA;
+    background-color: var(--f);
     font-size: 1rem;
-    line-height: 36px;
+    line-height: 1.5rem;
     background-image: url("./images/icon-dollar.svg");
     background-repeat: no-repeat;
     background-position: 19px;
@@ -104,20 +141,21 @@ body {
 }
 
 .input .tip .buttons button {
-    background: #00474B;
-    color: #fff;
+    background-color: var(--b);
+    color: var(--g);
     border-radius: 5px;
     padding: 6px 0 6px 0;
     border: none;
     font-size: 1rem;
     font-family: 'Space Mono', monospace;
+    cursor: pointer;
 }
 
 .input .tip .buttons input {
     font-family: 'Space Mono', monospace;
     text-align: right;
-    color: #547878;
-    background: #F3F9FA;
+    color: var(--c);
+    background-color: var(--f);
     border-radius: 5px;
     border: none;
     padding: 6px 17px 6px 0;
@@ -132,15 +170,27 @@ body {
 
 .input .people input {
     font-family: 'Space Mono', monospace;
-    background-color: #F3F9FA;
+    background-color: var(--f);
     font-size: 1rem;
-    line-height: 36px;
+    line-height: 1.5rem;
     background-image: url("./images/icon-person.svg");
     background-repeat: no-repeat;
     background-position: 19px;
     border: none;
     text-align: right;
     padding-right: 17.5px;
+}
+
+.input .people .peoplenumber {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input .people .peoplenumber .errormessage {
+    display: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E17457;
 }
 
 .output {
@@ -154,7 +204,6 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .output .wrapper .split, 
@@ -173,42 +222,41 @@ body {
 }
 
 .output .wrapper .left .large {
-    color: #fff;
-    font-size: 16px;
-    line-height: 24px;
+    color: var(--g);
+    font-size: 0.667rem;
+    line-height: 1rem;
 }
 
     .output .wrapper .left .small {
-    font-size: 13px;
-    line-height: 19px;
-    color: #7F9D9F;
+    font-size: 0.542rem;
+    line-height: 0.792rem;
+    color: var(--d);
 }
 
 .output .wrapper .right {
     display: flex;
     justify-content: flex-end;
-
-    font-family: 'Space Mono';
-    font-size: 32px;
-    line-height: 47px;
-    letter-spacing: -0.666667px;
-    color: #26C2AE;
+    font-family: 'Space Mono', monospace;
+    color: var(--a);
 }
 
 .output .wrapper button {
-    background: #26C2AE;
+    background: var(--a);
+    color: var(--b);
     border-radius: 5px;
     border: none;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 0.833rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
     font-family: 'Space Mono', monospace;
     padding: 9px 0 9px 0;
+    cursor: pointer;
 }
 
 
 footer {
-    font-size: 11px; text-align: center;
+    font-size: 0.458rem; 
+    text-align: center;
 }
 
 footer a {
