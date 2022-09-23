@@ -20,20 +20,16 @@
 /* Mobile */
 @media screen and (max-width: 920px) { 
     .container {
-        grid-template-rows: auto auto;
+        grid-template-rows: 1fr 1fr;
         border-radius: 25px 25px 0 0;
         min-height: 789px;
         min-width: 375px;
         width: 100%;
     }
     .input .tip .buttons {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-        /* grid-template-columns: repeat(2, calc(50% - 8px)); */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: repeat(3, 1fr);
         gap: 16px;
-    }
-    .input {
-        justify-content: space-around;
     }
     .input .bill,
     .input .tip,
@@ -58,10 +54,6 @@
         border-radius: 25px;
         max-width: 920px;
         min-height: 481px;
-    }
-    .input {
-        display: flex;
-        justify-content: space-around;
     }
     .input .tip .buttons {
         grid-template-columns: repeat(3, minmax(0,1fr));
@@ -108,6 +100,7 @@ body {
     min-width: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .input .bill,
@@ -130,6 +123,7 @@ body {
     border: none;
     text-align: right;
     padding-right: 17.5px;
+    cursor: pointer;
 }
 
 .input .tip {
@@ -142,8 +136,6 @@ body {
 }
 
 .input .tip .buttons button {
-    background-color: var(--b);
-    color: var(--g);
     border-radius: 5px;
     padding: 6px 0 6px 0;
     border: none;
@@ -151,6 +143,21 @@ body {
     font-family: 'Space Mono', monospace;
     cursor: pointer;
 }
+
+.input .tip .buttons button:hover {
+    background-color: #9FE8DF;
+}
+
+.input .tip .buttons .selected {
+    background-color: var(--a);
+    color: var(--b);
+}
+
+.input .tip .buttons .unselected {
+    background-color: var(--b);
+    color: var(--g);
+}
+
 
 .input .tip .buttons input {
     font-family: 'Space Mono', monospace;
@@ -161,6 +168,7 @@ body {
     border: none;
     padding: 6px 17px 6px 0;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 
@@ -180,6 +188,7 @@ body {
     border: none;
     text-align: right;
     padding-right: 17.5px;
+    cursor: pointer;
 }
 
 .input .people .peoplenumber {
@@ -254,6 +263,9 @@ body {
     cursor: pointer;
 }
 
+.output .wrapper button:hover {
+    background-color: #9FE8DF;
+}
 
 footer {
     font-size: 0.458rem; 
@@ -272,4 +284,4 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
-  }
+}

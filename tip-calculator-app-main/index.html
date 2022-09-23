@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Tip calculator app</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 <img src="./images/logo.svg" class="logo">
@@ -18,11 +19,11 @@
     <div class="tip">
       <label for="tipamount">Select Tip %</label>
       <div class="buttons">
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
+        <button class="unselected" value=".05">5%</button>
+        <button class="unselected" value="0.10">10%</button>
+        <button class="unselected" value="15">15%</button>
+        <button class="selected" value=".25">25%</button>
+        <button class="unselected" value="0.50">50%</button>
         <input type="number" id="tipamount" placeholder="Custom">
       </div>
     </div>
@@ -39,7 +40,7 @@
         <span class="small">/ person</span>
       </div>
       <div class="right">
-        <span class="amount">$4.25</span>
+        $<span class="amount" id="tipPerPerson"></span>
       </div>
     </div>
     <div class="total">
@@ -48,10 +49,10 @@
         <span class="small">/ person</span>
       </div>
       <div class="right">
-        <span class="amount">$402.25</span>
+        $<span class="amount" id="totalPerPerson"></span>
       </div>
     </div>
-    <button>Reset</button>
+    <button id="resetBtn">Reset</button>
   </div>
   </div>
 </div>
