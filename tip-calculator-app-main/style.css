@@ -251,8 +251,7 @@ body {
 }
 
 .output .wrapper button {
-    background: var(--a);
-    color: var(--b);
+
     border-radius: 5px;
     border: none;
     font-size: 0.833rem;
@@ -263,9 +262,21 @@ body {
     cursor: pointer;
 }
 
-.output .wrapper button:hover {
+.output .wrapper .activeBtn {
+    background: var(--a);
+    color: var(--b);
+}
+
+.output .wrapper .activeBtn:hover {
     background-color: #9FE8DF;
 }
+
+.output .wrapper .inactiveBtn {
+    background: #0D686D;
+    color: #00474B;
+}
+
+
 
 footer {
     font-size: 0.458rem; 
@@ -285,3 +296,16 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+.noBorder {
+    border: none !important;
+}
+
+.greenBorder {
+    border: 1px solid green !important;
+}
+
+.redBorder {
+    border: 1px solid red !important;
+}
+
