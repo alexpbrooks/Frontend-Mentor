@@ -3,26 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | GitHub user search app</title>
 </head>
 <body>
-
-  devfinder
-
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
+<div class="container">
+  <div class="header">
+    <h1>devfinder</h1>
+    <span id="toggledark">Dark</span>
+    <span id="togglelight" class="hidden">Light</span>
+  </div>
+<div class="search">
+  <input type="text" name="" id="" placeholder="Search GitHub username..."> 
+  <button type="submit">Search</button>
+</div>
+<div class="main">
+  <div class="userhead">
+    <img src="#">
+    <div class="userinfo">
+      <h2>Alex</h2>
+      <h3>tuxxey</h3>
+      <h4>Joined</h4>
+    </div>
+  </div>
+  <div class="userdesc">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet fugiat, explicabo illo odio enim incidunt facilis minus dicta, minima iure laborum sed veniam recusandae culpa labore sint alias veritatis.
+  </div>
+  <div class="userstat">
+    <div class="userstats">
+      <div class="repos">
+        Repos
+        <h3>0</h3>
+      </div>
+      <div class="followers">
+        Followers
+        <h3>0</h3>
+      </div>
+      <div class="following">
+        Following
+        <h3>0</h3>
+      </div>
+    </div>
+  </div>
+  <div class="userlink">
+    <ul>
+      <li class="location">Location</li>
+      <li class="website">Website</li>
+      <li class="twitter">Twitter</li>
+      <li class="company">Company</li>
+    </ul>
+  </div>
+</div>
+</div>
 </body>
 </html>
