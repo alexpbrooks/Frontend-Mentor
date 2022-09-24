@@ -33,6 +33,7 @@ function Calc() {
     let buttonTipAmount = buttons.querySelector('.selected').value
     let tipAmount
     if (customTipAmount != '') {
+        ResetAllButtons()
         tipAmount = customTipAmount*0.01
     }
     else {
