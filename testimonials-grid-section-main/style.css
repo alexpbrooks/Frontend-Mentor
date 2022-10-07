@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: red solid 1px; */
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  background: #ecf2f8;
+}
+
+@media (max-width: 1099px) {
+  .cards {
+    display: grid;
+    grid-template-rows: repeat(5, minmax(max-content, min-content));
+    gap: 24px;
+  }
+  .message {
+    margin-bottom: 16px;
+  }
+  .quote {
+    margin-bottom: 32px;
+  }
+  #one {
+    background: #733fc8 url('./images/bg-pattern-quotation.svg') right 24px top 0px no-repeat ;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px 24px;
+    grid-template-areas:
+      "one one two three"
+      "four five five three";
+  }
+  #one {
+    grid-area: one;
+    background: #733fc8 url('./images/bg-pattern-quotation.svg') right 80px top 0px no-repeat ;
+  }
+
+  #two {
+    grid-area: two;
+  }
+
+  #three {
+    grid-area: three;
+  }
+
+  #four {
+    grid-area: four;
+  }
+
+  #five {
+    grid-area: five;
+  }
+  .message {
+    margin-bottom: 24px;
+  }
+  .quote {
+    margin-bottom: 26px;
+  }
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  margin: 24px;
+}
+
+.card {
+  padding: 0 32px 0 32px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.user {
+  display: flex;
+  margin: 26px 0 18px 0;
+}
+
+.user img {
+  width: 28px;
+  height: 28px;
+  margin-right: 17px;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name h2 {
+  font-family: "Barlow Semi Condensed";
+  line-height: 13px;
+}
+
+.name span {
+  font-size: 11px;
+  line-height: 11px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.message {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.quote {
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+
+#one {
+  color: #ffffff;
+}
+
+#one .quote {
+  color: #cfcfcf;
+}
+
+#two {
+  background: #48556a;
+  color: #ffffff;
+}
+
+#three,
+#four {
+  background: #fff;
+  color: #48556a;
+}
+
+#five {
+  background: #19202d;
+  color: #fff;
+}
+
+#five .quote {
+  color: #ecf2f8;
+}
