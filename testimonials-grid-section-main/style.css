@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -36,12 +28,13 @@ body {
     margin-bottom: 32px;
   }
   #one {
-    background: #733fc8 url('./images/bg-pattern-quotation.svg') right 24px top 0px no-repeat ;
+    background: #733fc8 url('./images/bg-pattern-quotation.svg') right 24px top 0px no-repeat;
   }
 }
 
 @media (min-width: 1100px) {
   .cards {
+    max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -167,4 +160,15 @@ body {
 
 #five .quote {
   color: #ecf2f8;
+}
+
+footer {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+.footer a {
+color: hsl(228, 45%, 44%);
 }
