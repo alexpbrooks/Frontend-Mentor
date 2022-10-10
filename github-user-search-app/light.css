@@ -1,0 +1,50 @@
+:root {
+    --light-a: #0079FF;
+    --light-b: #697C9A;
+    --light-c: #4B6A9B;
+    --light-d: #2B3442;
+    --light-e: #F6F8FF;
+    --light-f: #FEFEFE;
+
+}
+
+body {
+    background: var(--light-e);
+}
+
+.search, .main {
+    background: var(--light-f)
+}
+
+.search button {
+    background: var(--light-a)
+}
+
+.userinfo h2 {
+    color: var(--light-d);
+}
+
+.userinfo h3 {
+    color: var(--light-a);
+}
+
+.userinfo h4 {
+    color: var(--light-b);
+}
+
+.userdesc {
+    color: var(--light-c);
+}
+
+.userstats {
+    background: var(--light-e);
+    color: var(--light-c);
+}
+
+.userstats > * > span {
+    color: var(--light-d);
+}
+
+.userlink {
+    color: var(--light-c);
+}

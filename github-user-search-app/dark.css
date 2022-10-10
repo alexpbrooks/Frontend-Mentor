@@ -1,0 +1,64 @@
+:root {
+    --light-a: #0079FF;
+    --light-b: #697C9A;
+    --light-c: #4B6A9B;
+    --light-d: #2B3442;
+    --light-e: #F6F8FF;
+    --light-f: #FEFEFE;
+
+    --dark-a: #0079FF;
+    --dark-b: #FEFEFE;
+    --dark-c: #141D2F;
+    --dark-d: #1E2A47;
+}
+
+body {
+    background: var(--dark-c)
+}
+
+.header {
+    color: #FFF;
+}
+
+.search, .main {
+    background: var(--dark-d);
+}
+
+.search input {
+    color: #FFF;
+}
+
+.search button {
+    background: var(--dark-a);
+}
+
+.userinfo h2 {
+    color: #FFF;
+}
+
+.userinfo h3 {
+    color: var(--dark-a);
+}
+
+.userinfo h4 {
+    color: #FFF;
+}
+
+.userdesc {
+    color: #FFF;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+.userstats {
+    background: var(--dark-c);
+    color: #FFF;
+}
+
+.userstats > * > span {
+    color: #FFF;
+}
+
+.userlink {
+    color: #FFF;
+}

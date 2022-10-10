@@ -7,55 +7,266 @@
     /* outline: red solid 1px; */
 }
 
-:root {
-    font-size: 15px;
-    --light-a: #0079FF;
-    --light-b: #697C9A;
-    --light-c: #4B6A9B;
-    --light-d: #2B3442;
-    --light-e: #F6F8FF;
-    --light-f: #FEFEFE;
-    --dark-a: #0079FF;
-    --dark-b: #FEFEFE;
-    --dark-c: #141D2F;
-    --dark-d: #1E2A47;
-}
-
-/* Desktop & Tablet*/
-@media only screen and (min-width: 400px) {
-    .userlink ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr
+/* Mobile */
+@media screen and (max-width: 573px) {
+    .main {
+        grid-template-rows: repeat(4, auto);
     }
-  }
 
-  @media only screen and (max-width: 399px) {
-    .userpic {
+    .userlink ul {
+        grid-template-columns: 1fr;
+    }
+
+    .main img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .main .profilepicture {
         display: none;
     }
-    .userhead, .userdesc, .userstat, .userlink {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }    
-  }
 
+    .userhead .profilepicture {
+        display: flex;
+    }
+
+    .search input {
+        font-size: 13px;
+    }
+
+    .search button {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .userinfo {
+        margin-left: 41px;
+    }
+
+    .userinfo h2 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .userinfo h3 {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+    
+    .userinfo h4 {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .userdesc {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .userstats {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .userstats > * > span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .userlink {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 573px) and (max-width: 729px) {
+    .main {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .userlink ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main img {
+        height: 117px;
+        width: 117px;
+    }
+
+    .main .profilepicture {
+        display: none;
+    }
+    
+    .userhead .profilepicture {
+        display: flex;
+    }
+
+    .search input {
+        font-size: 18px;
+    }
+
+    .search button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .userinfo {
+        margin-left: 41px;
+    }
+
+    .userinfo h2 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 39px;
+    }
+    
+    .userinfo h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .userinfo h4 {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .userdesc {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .userstats {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .userstats > * > span {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .userlink {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+
+}
+
+/* Desktop */
+@media screen and (min-width: 730px) {
+    .container {
+        max-width: 730px;
+        max-height: 586px;
+    }
+    .main {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: min-content auto; 
+    }
+
+    .main .userhead {
+        align-items: flex-start;
+    }
+    .main img {
+        height: 117px;
+        width: 117px;
+    }
+
+    .main .profilepicture {
+        grid-row: 1/5;
+    }
+
+    .userlink ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .userhead .profilepicture {
+        display: none;
+    }
+
+    .search input {
+        font-size: 18px;
+    }
+
+    .search button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .userinfo h2 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 39px;
+    }
+    
+    .userinfo h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .userinfo h4 {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .userdesc {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .userstats {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .userstats > * > span {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .userlink {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    
+}
 
 body {
-    line-height: 1.667rem;
-    font-family: 'Space Mono', monospace;
-    font-weight: 400;
-    background-color: var(--light-e);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
 }
 
 .container { 
     display: grid;
     grid-template-rows: 38px minmax(60px, 69px) auto;
-    margin: 24px;
+    margin: 31px 24px 31px 24px;
     min-width: 327px;
     min-height: 667px;
 }
@@ -68,22 +279,19 @@ body {
 }
 
 .header h1 {
-    font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    color: #222731;
 }
 
 .header #toggledark, .header #togglelight {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: 2.5px;
-    color: var(--light-c);
     text-transform: uppercase;
     padding-right: 32px;
-
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    cursor: pointer;
 }
 
 .header #toggledark {
@@ -102,7 +310,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--light-f);
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     border-radius: 15px;
     padding: 7px;
@@ -115,108 +322,68 @@ body {
     border: none;
     background: url(./assets/icon-search.svg) no-repeat left center;
     padding-left: 45px;
+    font-weight: 400;
     line-height: 25px;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
+    cursor: pointer;
 }
 
 .search button {
-    background-color: var(--light-a);
     color: #FFF;
-    font-family: 'Space Mono';
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-    padding: 12.5px;
+    padding: 12px 24px 12px 24px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .main {
-    background-color: var(--light-f);
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     border-radius: 15px;
     padding: 24px;
     display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
+}
+
+.main img {
+    border-radius: 50%;
 }
 
 .userhead {
     display: flex;
+    align-items: center;
 }
 
 .userinfo {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-left: 41px;
 }
 
-.userinfo h2 {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: #2B3442;
-}
 
-.userinfo h3 {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
-    color: #0079FF;
-}
-
-.userinfo h4 {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
-    color: #697C9A;
-}
-
-.userdesc {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 25px;
-    color: #4B6A9B;
-}
 
 .userstats {
-    background-color: var(--light-e);
     padding: 18px 15px 18px 15px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0,1fr));
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
-    text-align: center;
-    color: #4B6A9B;
+    border-radius: 10px;
 }
 
 .userstats > * {
     display: flex;
     flex-direction: column;
-}
-
-.userstats > * > span {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: #2B3442;
+    align-items: center;
 }
 
 .userlink {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
-    color: #4B6A9B;
     padding-left: 24px;
+}
+
+.userlink ul {
+    display: grid;
 }
 
 .userlink li {
     padding-left: 13px;
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
 .userlink .nolink {
@@ -226,6 +393,7 @@ body {
 
 .userlink #location {
     list-style-image: url(./assets/icon-location.svg);
+    color: #FFF;
 }
 
 .userlink #website {
