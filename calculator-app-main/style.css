@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: solid 1px red; */
+}
+
+/* Mobile */
+@media screen and (max-width: 539px) { 
+    main {
+        min-width: 327px;
+        min-height: 606px;
+    }
+    .output {
+        height: 88px;
+        font-size: 40px;
+        line-height: 37px;
+        letter-spacing: -0.666667px;
+    }
+    .controls {
+        height: 420px;
+    }   
+    .small {
+        padding: 24px 24px 13px 24px;
+        gap: 13px;
+    }
+    .small div {
+        background: #EAE3DC;
+        box-shadow: inset 0px -4px 0px #B3A497;
+        color: #434A59;
+
+        width: 60px;
+        height: 64px;
+        border-radius: 5px;
+        font-size: 32px;
+        line-height: 29px;
+        letter-spacing: -0.533333px;
+    }
+    .small #del, .large #reset {
+        background: #647198;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: inset 0px -4px 0px #414E73;
+        border-radius: 5px;
+
+        font-size: 20px;
+        line-height: 18px;
+        letter-spacing: -0.333333px;
+    }
+    .large {
+        padding: 0 24px 0 24px;
+        margin-bottom: 25px;
+    }
+    .large div {
+        width: 133px;
+        height: 64px;
+        border-radius: 5px;
+    }
+    .large #equals {
+        background: #D03F2F;
+        color: #fff;
+        box-shadow: inset 0px -4px 0px #93261A;
+        border-radius: 5px;
+
+        font-size: 20px;
+        line-height: 18px;
+        letter-spacing: -0.333333px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 540px) { 
+    main {
+        min-width: 540px;
+        min-height: 706px;
+    }
+    .output {
+        height: 128px;
+        font-size: 56px;
+        line-height: 52px;
+        letter-spacing: -0.933333px;
+    }
+    .controls {
+        height: 480px;
+    }
+    .small {
+        padding: 24px;
+        gap: 25px;
+    }
+    .small div {
+        color: #434A59;
+        background: #EAE3DC;
+        box-shadow: inset 0px -4px 0px #B3A497;
+
+        width: 101px;
+        height: 64px;
+        border-radius: 10px;
+        font-size: 40px;
+        line-height: 37px;
+        letter-spacing: -0.666667px;
+    }
+    .small #del, .large #reset {
+        background: #647198;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: inset 0px -4px 0px #414E73;
+        border-radius: 10px;
+
+        font-size: 28px;
+        line-height: 26px;
+        letter-spacing: -0.466667px;
+    }
+    .large {
+        padding: 0 24px 0 24px;
+        margin-bottom: 25px;
+    }
+    .large div {
+        width: 227px;
+        height: 64px;
+        border-radius: 10px;
+    }
+    .large #equals {
+        background: #D03F2F;
+        color: #fff;
+        box-shadow: inset 0px -4px 0px #93261A;
+        border-radius: 10px;
+
+        font-size: 28px;
+        line-height: 26px;
+        letter-spacing: -0.466667px;
+    }
+}
+
+
+body {
+    background: #3A4663;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+.header {
+    color: #fff;
+
+    height: 42px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 32px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.533333px;
+}
+
+.header .theme {
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 11px;
+    letter-spacing: 1px;
+}
+
+.header .toggle {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header .toggle ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 11px;
+}
+
+.header .toggle .pos {
+    background: #242D44;
+
+    border-radius: 13px;
+    width: 71px;
+    height: 26px;
+}
+
+.header .toggle .pos .dot {
+    background: #D03F2F;
+
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.output {
+    background: #181F33;
+    color: #fff;
+
+    padding-right: 32px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.controls {
+    background: #242D44;
+
+    border-radius: 10px;
+}
+
+.small {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.small div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.large div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
