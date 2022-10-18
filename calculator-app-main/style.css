@@ -7,6 +7,64 @@
     /* outline: solid 1px red; */
 }
 
+.theme-1 {
+    --main-bg: hsl(222, 26%, 31%);
+    --toggle-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --key-bbg: hsl(225, 21%, 49%);
+    --key-bbgh: hsl(224, 51%, 76%);
+    --key-bsh: hsl(224, 28%, 35%);
+    --key-rbg: hsl(6, 63%, 50%);
+    --key-rbgh: hsl(6, 93%, 67%);
+    --key-rsh: hsl(6, 70%, 34%);
+    --key-obg: hsl(30, 25%, 89%);
+    --key-obgh: hsl(31, 100%, 100%);
+    --key-osh: hsl(28, 16%, 65%);
+    --input: hsl(221, 14%, 31%);
+    --output: hsl(0, 0%, 100%); 
+    --equals: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.theme-2 {
+    --main-bg: hsl(0, 0%, 90%);
+    --toggle-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --key-bbg: hsl(185, 42%, 37%);
+    --key-bbgh: hsl(184, 40%, 56%);
+    --key-bsh: hsl(185, 58%, 25%);
+    --key-rbg: hsl(25, 98%, 40%);
+    --key-rbgh: hsl(25, 100%, 61%);
+    --key-rsh: hsl(25, 99%, 27%);
+    --key-obg: hsl(45, 7%, 89%);
+    --key-obgh: hsl(0, 0%, 100%, 1);
+    --key-osh: hsl(35, 11%, 61%);
+    --input: hsl(60, 10%, 19%);
+    --output: hsl(60, 10%, 19%);
+    --equals: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.theme-3 {
+    --main-bg: hsl(268, 75%, 9%);
+    --toggle-bg: hsl(268, 71%, 12%);
+    --screen-bg: hsl(268, 71%, 12%);
+    --key-bbg: hsl(281, 89%, 26%);
+    --key-bbgh: hsl(280, 56%, 44%);
+    --key-bsh: hsl(285, 91%, 52%);
+    --key-rbg: hsl(176, 100%, 44%);
+    --key-rbgh: hsl(176, 100%, 79%);
+    --key-rsh: hsl(177, 92%, 70%);
+    --key-obg: hsl(268, 47%, 21%);
+    --key-obgh: hsl(268, 54%, 44%);
+    --key-osh: hsl(290, 70%, 36%);
+    --input: hsl(52, 100%, 62%);
+    --output: hsl(52, 100%, 62%);
+    --equals: hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
 /* Mobile */
 @media screen and (max-width: 539px) { 
     main {
@@ -27,10 +85,6 @@
         gap: 13px;
     }
     .small div {
-        background: #EAE3DC;
-        box-shadow: inset 0px -4px 0px #B3A497;
-        color: #434A59;
-
         width: 60px;
         height: 64px;
         border-radius: 5px;
@@ -39,12 +93,8 @@
         letter-spacing: -0.533333px;
     }
     .small #del, .large #reset {
-        background: #647198;
-        color: #fff;
-        text-transform: uppercase;
-        box-shadow: inset 0px -4px 0px #414E73;
         border-radius: 5px;
-
+        text-transform: uppercase;
         font-size: 20px;
         line-height: 18px;
         letter-spacing: -0.333333px;
@@ -59,11 +109,7 @@
         border-radius: 5px;
     }
     .large #equals {
-        background: #D03F2F;
-        color: #fff;
-        box-shadow: inset 0px -4px 0px #93261A;
         border-radius: 5px;
-
         font-size: 20px;
         line-height: 18px;
         letter-spacing: -0.333333px;
@@ -90,10 +136,6 @@
         gap: 25px;
     }
     .small div {
-        color: #434A59;
-        background: #EAE3DC;
-        box-shadow: inset 0px -4px 0px #B3A497;
-
         width: 101px;
         height: 64px;
         border-radius: 10px;
@@ -102,12 +144,8 @@
         letter-spacing: -0.666667px;
     }
     .small #del, .large #reset {
-        background: #647198;
-        color: #fff;
-        text-transform: uppercase;
-        box-shadow: inset 0px -4px 0px #414E73;
         border-radius: 10px;
-
+        text-transform: uppercase;
         font-size: 28px;
         line-height: 26px;
         letter-spacing: -0.466667px;
@@ -122,21 +160,15 @@
         border-radius: 10px;
     }
     .large #equals {
-        background: #D03F2F;
-        color: #fff;
-        box-shadow: inset 0px -4px 0px #93261A;
         border-radius: 10px;
-
         font-size: 28px;
         line-height: 26px;
         letter-spacing: -0.466667px;
     }
 }
 
-
 body {
-    background: #3A4663;
-
+    background: var(--main-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -152,29 +184,33 @@ main {
 }
 
 .header {
-    color: #fff;
-
+    color: var(--output);
     height: 42px;
     margin-bottom: 32px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .header h1 {
     font-size: 32px;
     line-height: 29px;
-    text-align: center;
     letter-spacing: -0.533333px;
 }
 
 .header .theme {
     display: flex;
     align-items: flex-end;
+    margin-top: 10px;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 11px;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.header .theme span {
+    padding-bottom: 7px;
 }
 
 .header .toggle {
@@ -192,16 +228,14 @@ main {
 }
 
 .header .toggle .pos {
-    background: #242D44;
-
+    background: var(--toggle-bg);
     border-radius: 13px;
     width: 71px;
     height: 26px;
 }
 
 .header .toggle .pos .dot {
-    background: #D03F2F;
-
+    background: var(--key-rbg);
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -209,10 +243,13 @@ main {
     margin: 5px;
 }
 
-.output {
-    background: #181F33;
-    color: #fff;
+.header .toggle .pos .dot:hover {
+    background: var(--key-rbgh);
+}
 
+.output {
+    background: var(--screen-bg);
+    color: var(--output);
     padding-right: 32px;
     margin-bottom: 24px;
     border-radius: 10px;
@@ -222,8 +259,7 @@ main {
 }
 
 .controls {
-    background: #242D44;
-
+    background: var(--toggle-bg);
     border-radius: 10px;
 }
 
@@ -237,6 +273,24 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--key-obg);
+    box-shadow: inset 0px -4px 0px var(--key-osh);
+    color: var(--input);
+    cursor: pointer;
+}
+
+.small div:hover {
+    background: var(--key-obgh);
+}
+
+.small #del, .large #reset {
+    background: var(--key-bbg);
+    color: var(--white);
+    box-shadow: inset 0px -4px 0px var(--key-bsh);
+}
+
+.small #del:hover, .large #reset:hover {
+    background: var(--key-bbgh);
 }
 
 .large {
@@ -249,4 +303,24 @@ main {
     justify-content: center;
     align-items: center;
     justify-self: center;
+    cursor: pointer;
+}
+
+.large #equals {
+    background: var(--key-rbg);
+    color: var(--equals);
+    box-shadow: inset 0px -4px 0px var(--key-rsh);
+}
+
+.large #equals:hover {
+    background: var(--key-rbgh);
+}
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
 }
