@@ -206,7 +206,6 @@ main {
     font-size: 12px;
     line-height: 11px;
     letter-spacing: 1px;
-    cursor: pointer;
 }
 
 .header .theme span {
@@ -218,6 +217,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    cursor: pointer;
 }
 
 .header .toggle ul {

@@ -172,8 +172,8 @@
 /* Desktop */
 @media screen and (min-width: 730px) {
     .container {
-        max-width: 730px;
-        max-height: 586px;
+        width: 730px;
+        height: 586px;
     }
     .main {
         grid-template-rows: repeat(4, auto);
@@ -267,8 +267,7 @@ body {
     display: grid;
     grid-template-rows: 38px minmax(60px, 69px) auto;
     margin: 31px 24px 31px 24px;
-    min-width: 327px;
-    min-height: 667px;
+
 }
 
 .header {
@@ -393,7 +392,6 @@ body {
 
 .userlink #location {
     list-style-image: url(./assets/icon-location.svg);
-    color: #FFF;
 }
 
 .userlink #website {
