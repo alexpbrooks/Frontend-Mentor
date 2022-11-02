@@ -1,12 +1,6 @@
 :root {
-    --light-a: #0079FF;
-    --light-b: #697C9A;
-    --light-c: #4B6A9B;
-    --light-d: #2B3442;
-    --light-e: #F6F8FF;
-    --light-f: #FEFEFE;
-
     --dark-a: #0079FF;
+    --dark-ab: #60ABFF;
     --dark-b: #FEFEFE;
     --dark-c: #141D2F;
     --dark-d: #1E2A47;
@@ -28,8 +22,12 @@ body {
     color: #FFF;
 }
 
-.search button {
-    background: var(--dark-a);
+.search .inactive {
+    background: var(--dark-a)
+}
+
+.search .active {
+    background: var(--dark-ab)
 }
 
 .userinfo h2 {

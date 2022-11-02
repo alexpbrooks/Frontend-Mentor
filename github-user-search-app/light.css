@@ -1,5 +1,6 @@
 :root {
     --light-a: #0079FF;
+    --light-ab: #60ABFF;
     --light-b: #697C9A;
     --light-c: #4B6A9B;
     --light-d: #2B3442;
@@ -16,8 +17,12 @@ body {
     background: var(--light-f)
 }
 
-.search button {
+.search .inactive {
     background: var(--light-a)
+}
+
+.search .active {
+    background: var(--light-ab)
 }
 
 .userinfo h2 {

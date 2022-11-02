@@ -13,12 +13,13 @@
 <div class="container">
   <div class="header">
     <h1>devfinder</h1>
-    <span id="toggledark">Dark</span>
-    <span id="togglelight" class="hidden">Light</span>
+    <span id="toggledark">Light</span>
+    <span id="togglelight" class="hidden">Dark</span>
   </div>
 <div class="search">
   <input type="text" name="usersearch" id="usersearch" placeholder="Search GitHub username..."> 
-  <button type="submit">Search</button>
+  <span id="usernotfound"></span>
+  <button type="submit" class="inactive">Search</button>
 </div>
 <div class="main">
   <img src="#" class="profilepicture">
@@ -31,7 +32,6 @@
     </div>
   </div>
   <div class="userdesc">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
   </div>
   <div class="userstat">
     <div class="userstats">

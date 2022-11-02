@@ -13,8 +13,12 @@ document.querySelector('#togglelight').addEventListener('click', () => {
 async function pullData(username) {
     let url = 'https://api.github.com/users/'+username
     let response = await fetch(url);
-    let result = await response.json();
-    return saveData(result)
+    if (response.status === 200) {
+        document.querySelector('#usernotfound').textContent=''
+        let result = await response.json();
+        return saveData(result)
+    }
+    document.querySelector('#usernotfound').textContent='No results'
 }
 
 function saveData(result) {
@@ -91,6 +95,14 @@ document.querySelector('button').addEventListener('click',()=> {
     if(searchQuery != null) {pullData(searchQuery)}
 })
 
-pullData('octocat')
+document.querySelector('#usersearch').addEventListener('input',()=> {
+    if (document.querySelector('#usersearch').value !== '') {
+        document.querySelector('button').className='active'
+        return 
+    }
+    document.querySelector('button').className='inactive'
+})
 
-// TODO CSS messes up if .userdesc is empty
+
+pullData('octocat')
+// pullData('AAAAAAAAAAaaAAAAAA')

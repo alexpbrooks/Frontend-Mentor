@@ -293,12 +293,25 @@ body {
     cursor: pointer;
 }
 
-.header #toggledark {
+.header #togglelight {
     background: url(./assets/icon-moon.svg) no-repeat center right;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(106deg) brightness(105%) contrast(101%);
 }
 
-.header #togglelight {
+.header #togglelight:hover {
+    filter: invert(78%) sepia(59%) saturate(1140%) hue-rotate(184deg) brightness(87%) contrast(89%);
+    color: #fff;
+}
+
+.header #toggledark {
     background: url(./assets/icon-sun.svg) no-repeat center right;
+    filter: invert(42%) sepia(11%) saturate(1775%) hue-rotate(178deg) brightness(94%) contrast(96%);
+}
+
+.header #toggledark:hover {
+    filter: invert(13%) sepia(17%) saturate(723%) hue-rotate(181deg) brightness(92%) contrast(94%);
+    color: #fff;
+
 }
 
 .header .hidden {
@@ -404,4 +417,13 @@ body {
 
 .userlink #company {
     list-style-image: url(./assets/icon-company.svg);
+}
+
+#usernotfound {
+    position: relative;
+    white-space: nowrap;
+    color: hsla(0, 91%, 62%, 1);
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 15px;
 }
