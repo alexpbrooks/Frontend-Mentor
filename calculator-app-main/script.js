@@ -29,6 +29,7 @@ let numberString = ''
 let calculatorList = []
 
 function addNumber(number) {
+    updateCalculator(calculatorList)
     numberString = numberString+number
     document.querySelector('.output').textContent=numberString
 }
@@ -43,13 +44,64 @@ function checkNumberIsFloat(number) {
 function addOperator(operator) {
     if (numberString !== '') {
         calculatorList.push(parseInt(numberString))
+        updateCalculator(calculatorList)
         numberString = ''
-        console.log (calculatorList)
     }
     if (typeof(calculatorList[(calculatorList.length-1)]) === 'number') {
         calculatorList.push(operator)
-        console.log(operator)
+        updateCalculator(calculatorList)
     }
+}
+
+function calculateSum() {
+    if (numberString !== '') {
+        calculatorList.push(parseInt(numberString))
+        numberString = ''
+    }
+    if (typeof(calculatorList[(calculatorList.length-1)]) === 'number') {
+        updateCalculator(calculatorList)
+        document.querySelector('.output').textContent=document.querySelector('.output').textContent+'='
+        calculate(calculatorList)
+    }
+}
+
+let num1;
+let num2;
+let oper;
+
+function calculate(calculatorList) {
+    calculatorList.forEach(element => {
+        if (typeof(element) === 'number') {
+            if (num1 === undefined) { num1 = element; }
+            else { num2 = element }
+        }
+        if (typeof(element) !== 'number') {
+            oper = element
+        }
+        if (num2 === 0 && oper === 'div') {
+            document.querySelector('.output').textContent='Cannot divide by zero.';
+            document.querySelector('.output').style.fontSize='smaller';
+            return
+        }
+        if (num1 !== undefined && num2 !== undefined && oper !==undefined) {
+            num1 = operate(num1,oper,num2)
+            num2 = undefined;
+            oper = undefined;
+            numStr = '';
+            document.querySelector('.output').textContent=num1
+        }    
+    }
+    );
+    num1 = undefined;
+    num2 = undefined;
+    oper = undefined;
+}
+
+function operate(number1,operator,number2) {
+    if (operator === 'add') {return number1+number2}
+    if (operator === 'sub') {return number1-number2}
+    if (operator === 'mul') {return number1*number2}
+    if (operator === 'div') {return number1/number2}
 }
 
 function clearNumber() {
@@ -63,14 +115,23 @@ function addDecimal() {
     document.querySelector('.output').textContent=numberString
 }
 
-function resetCalculator() {
-    clearNumber();
-    // toMath = []
+function updateCalculator(calculatorList) {
+    calculatorText = '';
+    calculatorList.forEach(element => {
+        if (checkNumberIsFloat(element) === true || Number.isInteger(element) === true) { calculatorText = calculatorText+element; }
+        operators.forEach(operator => {
+            if (element === operator.name) {calculatorText=calculatorText+operator.symbol}
+        })
+    })
+    document.querySelector('.output').textContent=calculatorText;
 }
 
-function calculateSum() {
-    console.log('calc')
+function resetCalculator() {
+    calculatorList = []
+    clearNumber();
 }
+
+
 
 for (let number=0; 10>number; number++) {
     document.getElementById(number).addEventListener('click', () => addNumber(number) )
