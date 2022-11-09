@@ -11,65 +11,84 @@
 <body>
 <main>
   <header>
-    <h1>Notifications <span id="notifications">3</span></h1>
+    <h1>Notifications</h1>
+    <span id="notifications"></span>
     <span id="markasread">Mark all as read</span>
   </header>
+
   <section class="unread">
-    <img src="./assets/images/avatar-mark-webber.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Mark Webber</span> <span class="message">reacted to your recent post</span> <a class="link" href="#">My first tournament today!</a><span class="dot"></span></span>
-      <span class="timestamp">1m ago</span>
+    <div><img src="./assets/images/avatar-mark-webber.webp"></div>
+    <div class="message">
+      <span><a href="#">Mark Webber</a> reacted to your recent post <a href="#">My first tournament today!</a></span>
+      <span>1m ago</span>
     </div>
   </section>
 
   <section class="unread">
-    <img src="./assets/images/avatar-angela-gray.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Angela Gray </span> <span class="message">followed you</span> <a class="link" href="#"></a><span class="dot"></span></span>
-      <span class="timestamp">5m ago</span>
+    <div><img src="./assets/images/avatar-angela-gray.webp"></div>
+    <div class="message">
+      <span><a href="#">Angela Gray</a> followed you</span>
+      <span>5m ago</span>
     </div>
   </section>
 
   <section class="unread">
-    <img src="./assets/images/avatar-jacob-thompson.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Jacob Thompson</span> <span class="message">has joined your group</span> <a class="link" href="#">Chess Club</a><span class="dot"></span></span>
-      <span class="timestamp">1 day ago</span>
+    <div class="avatar">
+      <img src="./assets/images/avatar-jacob-thompson.webp">
     </div>
-  </section>
+    <div class="message">
+      <span><a href="#">Jacob Thompson</a> has joined your group <a href="#">Chess Club</a></span>
+      <span>1 day ago</span>
+  </div>
+  </section> 
   
   <section class="read">
-    <img src="./assets/images/avatar-rizky-hasanuddin.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Rizky Hasanuddin </span> <span class="message">sent you a private message</span> <a class="link" href="#"></a></span>
-      <span class="timestamp">5 days ago</span>
-      <span class="private-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</span>
+    <div>
+      <img src="./assets/images/avatar-rizky-hasanuddin.webp">
     </div>
-  </section>
-  
-  <section>
-    <img src="./assets/images/avatar-kimberly-smith.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Kimberly Smith </span> <span class="message">commented on your picture</span></span>
-      <span class="timestamp">1 week ago</span>
+    <div class="message">
+      <span><a href="#">Rizky Hasanuddin</a> sent you a private message</span>
+      <span>5 days ago</span>
+      <div class="privatemessage">
+        Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+      </div>
     </div>
-    <img src="./assets/images/image-chess.webp">
-  </section>
     
-  <section>
-    <img src="./assets/images/avatar-nathan-peterson.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Nathan Peterson</span> <span class="message">reacted to your recent post</span> <a class="link" href="#">5 end-game strategies to increase your win rate</a></span>
-      <span class="timestamp">2 weeks ago</span>
+  </section> 
+  
+  <section class="unread">
+    <div>
+      <img src="./assets/images/avatar-kimberly-smith.webp">
+    </div>
+    <div class="message">
+      <span><a href="#">Kimberly Smith</a> commented on your picture</span>
+      <span>1 week ago</span>
+    </div>
+    <div>
+      <img src="./assets/images/image-chess.webp">
     </div>
   </section>
+ 
   <section>
-    <img src="./assets/images/avatar-anna-kim.webp">
-    <div class="card">
-      <span class="notification"><span class="name">Anna Kim</span> <span class="message">left the group</span> <a class="link" href="#">Chess Club</a></span>
-      <span class="timestamp">2 weeks ago</span>
+    <div>
+      <img src="./assets/images/avatar-nathan-peterson.webp">
+    </div>
+    <div class="message">
+      <span><a href="#">Nathan Peterson</a> reacted to your recent post <a href="#">5 end-game strategies to increase your win rate</a></span>
+      <span>2 weeks ago</span>
     </div>
   </section>
+
+  <section>
+    <div>
+      <img src="./assets/images/avatar-anna-kim.webp">
+    </div>
+    <div class="message">
+      <span><a href="#">Anna Kim</a> left the group <a href="#">Chess Club</a></span>
+      <span>2 weeks ago</span>
+    </div>
+  </section> 
+
 </main>
 
 

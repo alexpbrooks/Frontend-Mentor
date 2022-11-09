@@ -10,42 +10,59 @@
     src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
 }
 
+:root {
+    font-size: 16px;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    body {
+        font-size: 0.875rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 561px) {
+    body {
+        font-size: 1rem;
+    }
+    main {
+        box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+        border-radius: 15px;
+    }
+}
+
 body {
+    background: #F9FAFD;
     min-height: 100vh;
-    margin: 16px;
-    background-color: #F9FAFD;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Plus Jakarta Sans';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
+    background: #FFF;
     display: flex;
     flex-direction: column;
+    min-width: 375px;
+    max-width: 750px;
+    padding: 4%;
     gap: 10px;
-    max-width: 730px;
-    min-width: 343px;
-    background: #FFF;
-    box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
-    border-radius: 15px;
-    padding: 16px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 14px;
+    margin-bottom: 0.875rem;
 }
 
 header h1 {
     font-weight: 800;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 1.5em; 
     color: #1C202B;
 }
 
@@ -54,10 +71,10 @@ header #notifications {
     background: #0A327B;
     border-radius: 6px;
     font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
     padding: 4px 11px 4px 11px;
-    margin-left: 9px;
+    margin-left: 2%;
+    margin-right: auto;
 }
 
 header #markasread {
@@ -65,13 +82,18 @@ header #markasread {
     cursor: pointer;
 }
 
+header #markasread:hover {
+    color: #0A327B;
+}
+
 section {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     color: #5E6778;
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: 0.5em;
+    padding: 1em;
     gap: 13px;
-    line-height: 18px;
 }
 
 .read {
@@ -82,41 +104,39 @@ section {
     background: #F7FAFD;
 }
 
+section .message {
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section .message span:last-child {
+    color: #939CAD;
+}
+
+section div:last-child img {
+    cursor: pointer;
+}
+
 section a {
     color: #5E6778;
     font-weight: 700;
     text-decoration: none;
 }
 
-section img {
-    width: 39px;
-    height: 39px;
-}
-
-section .card {
-    display: flex;
-    flex-direction: column;
-}
-
-section .name {
-    font-weight: 800;
+section a:first-child {
     color: #1C202B;
+    font-weight: 800;
 }
 
-section .timestamp {
-    color: #939CAD;
+section a:hover {
+    color: #0A327B;
 }
 
-section .private-message {
-    border: 1px solid #DDE7EE;
-    border-radius: 5px;
-    padding: 16px;
-    margin-top: 12px;
-    cursor: pointer;
-}
-
-section .private-message:hover {
-    background: #E5EFFA;
+section img {
+    width: 2.75em;
+    height: 2.75em;
 }
 
 section .dot {
@@ -126,6 +146,18 @@ section .dot {
     background: #F65552;
     border-radius: 50%;
     margin-left: 6px;
+}
+
+section .privatemessage {
+    border: 1px solid #DDE7EE;
+    border-radius: 5px;
+    padding: 1.25em;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+section .privatemessage:hover {
+    background: #E5EFFA;
 }
 
 .attribution { font-size: 11px; text-align: center; }
