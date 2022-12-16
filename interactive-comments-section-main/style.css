@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-style: none;
+    /* outline: red solid 1px; */
+}
+
+:root {
+    font-size: 16px;
+}
+
+/* Mobile */
+@media (max-width: 499px) {
+    .mainComment, .subComment {
+        padding: 1rem;
+    }
+    .optionsDesktop, .commentHeadReply, .addCommentAvatar {
+        display: none;
+    }
+    .optionsMobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .commentFootReply {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #5357B6;
+        font-weight: 500;
+    }
+    .addComment {
+        flex-direction: column;
+    }
+    .submitComment {
+        align-items: center;
+    }
+    .pointsControl {
+        gap: 0.75rem;
+    }
+    .subCommentsSidebar {
+        display: flex;
+        min-width: 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 500px) {
+    .mainComment, .subComment {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .optionsMobile {
+        display: none;
+    }
+    .commentHeadReply {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #5357B6;
+        font-weight: 500;
+    }
+    .addComment {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .submitComment img {
+        display: none;
+    }
+    .pointsControl {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .subCommentsSidebar {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 43px;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F6FA;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: minmax(343px, 730px);
+    gap: 25px;
+    margin: 1rem;
+}
+
+.viewComments {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.subComments {
+    display: flex;
+}
+
+
+
+.subCommentsComments {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: end;
+    gap: 25px;
+}
+
+.subCommentsSidebar hr {
+    border-left: 2px solid #E9EBF0;
+}
+
+.mainComment, .subComment {
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.wrapperComment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.commentHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentHeadAvatar, .addCommentAvatar  {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.commentHeadUser {
+    margin-left: 1rem;
+    font-weight: 500;
+    color: #334253;
+}
+
+.commentHeadTime {
+    margin-right: auto;
+    margin-left: 1rem;
+    color: #67727E;
+}
+
+.commentBody {
+    color: #67727E;
+}
+
+.pointsControl {
+    background: #F5F6FA;
+    border-radius: 10px;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5357B6;
+    font-weight: 500;
+}
+
+.pointsControl > * {
+    display: flex;
+}
+
+
+
+
+.pointsControlPlus, .pointsControlMinus {
+    color: #C5C6EF;
+}
+
+.addComment {
+    display: flex;
+    gap: 1rem;
+}
+
+.addComment form {
+    width: 100%;
+}
+.addComment textarea {
+    width: 100%;
+    height: 6rem;
+    border: 1px solid #E9EBF0;
+    border-radius: 8px;
+    color: #67727E;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+}
+
+.submitComment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submitComment button {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #5357B6;
+    border-radius: 8px;
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    border-style: none;
+    height: 3rem;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
