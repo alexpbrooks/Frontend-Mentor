@@ -1,41 +1,27 @@
-document.querySelector('#toggledark').addEventListener('click', () => {
-    document.querySelector("#mode").href = "dark.css";
-    document.querySelector('#toggledark').className='hidden';
-    document.querySelector('#togglelight').className='';
-})
-
-document.querySelector('#togglelight').addEventListener('click', () => {
-    document.querySelector("#mode").href = "light.css";
-    document.querySelector('#togglelight').className='hidden';
-    document.querySelector('#toggledark').className='';
-})
-
 async function pullData(username) {
     let url = 'https://api.github.com/users/'+username
     let response = await fetch(url);
     if (response.status === 200) {
         document.querySelector('#usernotfound').textContent=''
         let result = await response.json();
-        return saveData(result)
+        return populateData(result)
     }
     document.querySelector('#usernotfound').textContent='No results'
 }
 
-function saveData(result) {
-    let resultData = {};
-    resultData['avatar_url'] = result['avatar_url']
-    resultData['bio'] = result['bio']
-    resultData['blog'] = result['blog']
-    resultData['company'] = result['company']
-    resultData['created_at'] = result['created_at']
-    resultData['followers'] = result['followers']
-    resultData['following'] = result['following']
-    resultData['location'] = result['location']
-    resultData['login'] = result['login']
-    resultData['name'] = result['name']
-    resultData['public_repos'] = result['public_repos']
-    resultData['twitter_username'] = result['twitter_username']
-    return populateData(resultData)
+function populateData(resultData) {
+    document.querySelector('.main').querySelector('img').src = resultData['avatar_url']
+    document.querySelector('.userhead').querySelector('img').src = resultData['avatar_url']
+    const userInfo = document.querySelector('.userinfo')
+    userInfo.querySelector('h2').textContent = resultData['name']
+    userInfo.querySelector('h3').textContent = resultData['login']
+    userInfo.querySelector('h4').textContent = 'Joined '+new Date(resultData['created_at']).toDateString()
+    document.querySelector('.userdesc').textContent = resultData['bio']
+    const userStat = document.querySelector('.userstat')
+    userStat.querySelector('#repos').textContent = resultData['public_repos'] 
+    userStat.querySelector('#followers').textContent = resultData['followers'] 
+    userStat.querySelector('#following').textContent = resultData['following'] 
+    populateUserInfo(resultData)
 }
 
 function populateUserInfo(resultData) {
@@ -75,20 +61,17 @@ function populateUserInfo(resultData) {
     }
 }
 
-function populateData(resultData) {
-    document.querySelector('.main').querySelector('img').src = resultData['avatar_url']
-    document.querySelector('.userhead').querySelector('img').src = resultData['avatar_url']
-    const userInfo = document.querySelector('.userinfo')
-    userInfo.querySelector('h2').textContent = resultData['name']
-    userInfo.querySelector('h3').textContent = resultData['login']
-    userInfo.querySelector('h4').textContent = 'Joined '+new Date(resultData['created_at']).toDateString()
-    document.querySelector('.userdesc').textContent = resultData['bio']
-    const userStat = document.querySelector('.userstat')
-    userStat.querySelector('#repos').textContent = resultData['public_repos'] 
-    userStat.querySelector('#followers').textContent = resultData['followers'] 
-    userStat.querySelector('#following').textContent = resultData['following'] 
-    populateUserInfo(resultData)
-}
+document.querySelector('#toggledark').addEventListener('click', () => {
+    document.querySelector("#mode").href = "dark.css";
+    document.querySelector('#toggledark').className='hidden';
+    document.querySelector('#togglelight').className='';
+})
+
+document.querySelector('#togglelight').addEventListener('click', () => {
+    document.querySelector("#mode").href = "light.css";
+    document.querySelector('#togglelight').className='hidden';
+    document.querySelector('#toggledark').className='';
+})
 
 document.querySelector('button').addEventListener('click',()=> {
     const searchQuery = document.querySelector('#usersearch').value
@@ -103,6 +86,4 @@ document.querySelector('#usersearch').addEventListener('input',()=> {
     document.querySelector('button').className='inactive'
 })
 
-
 pullData('octocat')
-// pullData('AAAAAAAAAAaaAAAAAA')
